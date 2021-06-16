@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Postes{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">Ajouter une Poste</h1><br>
+        <div class="col-md-9">
+            {{ include('postes/_form.html.twig') }}
+            <a href="{{ path('postes_index') }}" class="btn btn-secondary">Retourner</a>
+        </div>
+    </div>
+    
+{% endblock %}

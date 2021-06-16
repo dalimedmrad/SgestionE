@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Employe{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <h1 class="text-center">Modifier l'Employé N°{{employe.id}}</h1><br>
+        <div class="col-md-10">
+            {{ include('employes/_form.html.twig') }}<br>
+            <a href="{{ path('employes_index') }}" class="btn btn-danger">Annuler</a>
+        </div>
+    </div>
+{% endblock %}

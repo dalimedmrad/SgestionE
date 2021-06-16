@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="text-center">Modifier le Produit N°{{ produit.id}}</h1><br>
+    <div class="col-md-10">
+        {{ include('produits/_form.html.twig') }}<br>
+        <a href="{{ path('produits_index') }}"  class="btn btn-danger">Annuler</a>
+    </div>
+</div>
+{% endblock %}

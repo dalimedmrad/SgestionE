@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="text-center">Categorie N°{{category.id }}</h1><br>
+    <div class="col-md-10">
+        <table class="table table-striped custab" border="0">
+            <tbody>
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ category.nom }}</td>
+                </tr>
+                <tr>
+                    <th>Caractéristiques</th>
+                    <td>{{ category.caracteristiques }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="{{ path('categories_index') }}" class="btn btn-danger">Retourner</a>
+    </div>
+</div>
+{% endblock %}

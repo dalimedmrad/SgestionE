@@ -1,0 +1,19 @@
+{{ form_start(form) }}
+    <div class="form-group">
+        {{ form_label(form.nom) }}
+        {{ form_widget(form.nom,{'attr': {'class': 'form-control'} } ) }}
+        {{ form_label(form.prenom) }}
+        {{ form_widget(form.prenom,{'attr': {'class': 'form-control'} } ) }}
+        {{ form_label(form.addresse) }}
+        {{ form_widget(form.addresse,{'attr': {'class': 'form-control'} } ) }}
+        {{ form_label(form.email) }}
+        {{ form_widget(form.email,{'attr': {'class': 'form-control'} } ) }}
+        {{ form_label(form.numtlf) }}
+        {{ form_widget(form.numtlf,{'attr': {'class': 'form-control'} } ) }}
+        {{ form_label(form.salaire) }}
+        {{ form_widget(form.salaire,{'attr': {'class': 'form-control'} } ) }}
+        {{ form_label(form.poste) }}
+        {{ form_widget(form.poste,{'attr': {'class': 'form-control'} } ) }}
+    </div>
+    <button class="btn btn-success" type="submit">Ajouter</button>
+{{ form_end(form) }}

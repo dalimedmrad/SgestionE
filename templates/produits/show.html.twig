@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">Produit N° {{produit.id}}</h1><br>
+        <div class="col-md-10">
+            <table class="table table-striped custab" border="0">
+                <tbody>
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ produit.nom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Prix(DT)</th>
+                        <td>{{ produit.prixUnit }}</td>
+                    </tr>
+                    <tr>
+                        <th>Quantité en Stock</th>
+                        <td>{{ produit.quantiteStock }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+     
+       <a href="{{ path('produits_index') }}" class="btn btn-secondary">Retourner</a>
+    </div>
+{% endblock %}

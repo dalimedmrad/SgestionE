@@ -1,0 +1,18 @@
+default:
+    path: /
+    controller: App\Controller\DefaultController::index
+categories:
+    path: /categories
+    controller: App\Controller\CategoriesController::index
+produits:
+    path: /produits
+    controller: App\Controller\ProduitsController::index
+postes:
+    path: /postes
+    controller: App\Controller\PostesController::index
+employes:
+    path: /employes
+    controller: App\Controller\EmployesController::index
+apropos:
+    path: /contact
+    controller: App\Controller\ContactController::index

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categorie{% endblock %}
+
+{% block body %} 
+  <div class="container">
+      <h1 class="text-center">Ajouter une Categorie</h1><br>
+      <div class="col-md-9">
+        {{ include('categories/_form.html.twig') }}
+
+        <a href="{{ path('categories_index') }}" class="btn btn-danger pull-right"><span class="glyphicon glyphicon-remove"></span> Annuler</a>
+      </div>
+  </div>  
+{% endblock %}

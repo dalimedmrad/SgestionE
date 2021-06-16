@@ -1,0 +1,7 @@
+{{ form_start(form) }}
+    <div class="form-group">
+        {{ form_label(form.nom) }}
+        {{ form_widget(form.nom,{'attr': {'class': 'form-control'} } ) }}
+    </div>
+    <button class="btn btn-success" type="submit">Ajouter</button><br><br>  
+{{ form_end(form) }}

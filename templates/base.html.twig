@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Bienvenue{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+            <!-- Font Awesome -->
+            <link rel="stylesheet" href="{{ asset ('plugins/fontawesome-free/css/all.min.css') }}">
+            <!-- Ionicons -->
+            <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+            <!-- Tempusdominus Bbootstrap 4 -->
+            <link rel="stylesheet" href="{{ asset  ('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+            <!-- iCheck -->
+            <link rel="stylesheet" href="{{ asset ('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+             <!-- fullCalendar -->
+            <link rel="stylesheet" href="{{ asset ('plugins/fullcalendar/main.min.css') }}">
+            <link rel="stylesheet" href="{{ asset ('plugins/fullcalendar-daygrid/main.min.css') }}">
+            <link rel="stylesheet" href="{{ asset ('plugins/fullcalendar-timegrid/main.min.css') }}">
+            <link rel="stylesheet" href="{{ asset ('plugins/fullcalendar-bootstrap/main.min.css') }}">
+            <!-- JQVMap -->
+            <link rel="stylesheet" href="{{ asset ('plugins/jqvmap/jqvmap.min.css')}}">
+            <!-- Theme style -->
+            <link rel="stylesheet" href="{{ asset ('dist/css/adminlte.min.css')}}">
+            <!-- overlayScrollbars -->
+            <link rel="stylesheet" href="{{ asset ('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+            <!-- Daterange picker -->
+            <link rel="stylesheet" href="{{ asset ('plugins/daterangepicker/daterangepicker.css')}}">
+            <!-- summernote -->
+            <link rel="stylesheet" href="{{ asset ('plugins/summernote/summernote-bs4.css')}}">
+            <!-- Google Font: Source Sans Pro -->
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body class="hold-transition sidebar-mini layout-fixed">
+      <div class="wrapper">
+          <!-- Navbar -->
+          <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+              </li>
+              <li class="nav-item d-none d-sm-inline-block">
+                <a href="/" class="nav-link">Acceuil</a>
+              </li>
+              <li class="nav-item d-none d-sm-inline-block">
+                <a href="/contact" class="nav-link">À propos</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.navbar -->
+
+          <!-- Main Sidebar Container -->
+          <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="/" class="brand-link">
+              <img src="{{ asset ('img/SGE.png') }}" alt="Logo SGE" class="brand-image img-circle elevation-3" with="70" style="opacity: .8">
+              <span class="brand-text font-weight-light">SGE</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+              <!-- Sidebar user panel (optional) -->
+              <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                  {# <img src="{{ asset('img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image"> #}
+                </div>
+              </div>
+
+              <!-- Sidebar Menu -->
+              <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                  <!-- Add icons to the links using the .nav-icon class
+                      with font-awesome or any other icon font library -->
+                  <li class="nav-item has-treeview menu-open">
+                    <a href="/" class="nav-link">
+                      <i class="nav-icon fas fa-tachometer-alt"></i>
+                      <p>
+                        Acceuil
+                      </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/categories" class="nav-link">
+                      <i class="nav-icon fas fa-th"></i>
+                      <p>
+                        Categories 
+                      </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/produits" class="nav-link">
+                      <i class="nav-icon fas fa-th"></i>
+                      <p>
+                        Produits 
+                      </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/postes" class="nav-link">
+                      <i class="nav-icon fas fa-th"></i>
+                      <p>
+                        Postes 
+                      </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/employes" class="nav-link">
+                      <i class="nav-icon fas fa-th"></i>
+                      <p>
+                        Employes 
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+          </aside>
+
+          <!-- Content Wrapper. Contains page content -->
+          <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+              <div class="container-fluid"></div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="content">
+                {% block body %}{% endblock %}
+            </section>
+            <!-- /.content -->
+          </div>
+          <!-- /.content-wrapper -->
+          <footer class="main-footer text-center"><strong>Copyright &copy; 2021 -- SGE -- Tous droits réservés.</strong></footer>
+
+          <!-- Control Sidebar -->
+          <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+          </aside>
+          <!-- /.control-sidebar -->
+      </div>
+      <!-- ./wrapper -->
+      {% block javascripts %}
+          <script src="{{ asset ('plugins/jquery/jquery.min.js') }}"></script>
+          <!-- jQuery UI 1.11.4 -->
+          <script src="{{ asset('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+          <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+          <script>
+          $.widget.bridge('uibutton', $.ui.button)
+          </script>
+          <!-- Bootstrap 4 -->
+          <script src="{{ asset ('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+          <!-- ChartJS -->
+          <script src="{{ asset ('plugins/chart.js/Chart.min.js') }}"></script>
+          <!-- Sparkline -->
+          <script src="{{ asset ('plugins/sparklines/sparkline.js') }}"></script>
+          <!-- JQVMap -->
+          <script src="{{ asset ('plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+          <script src="{{ asset ('plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+          <!-- jQuery Knob Chart -->
+          <script src="{{ asset ('plugins/jquery-knob/jquery.knob.min.js') }}"></script>
+          <!-- daterangepicker -->
+          <script src="{{ asset ('plugins/moment/moment.min.js') }}"></script>
+          <script src="{{ asset ('plugins/daterangepicker/daterangepicker.js') }}"></script>
+          <!-- Tempusdominus Bootstrap 4 -->
+          <script src="{{ asset ('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+          <!-- Summernote -->
+          <script src="{{ asset ('plugins/summernote/summernote-bs4.min.js') }}"></script>
+          <!-- overlayScrollbars -->
+          <script src="{{ asset ('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+          <!-- AdminLTE App -->
+          <script src="{{ asset ('js/adminlte.js') }}"></script>
+          <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+          <script src="{{ asset ('js/pages/dashboard.js') }}"></script>
+          <!-- AdminLTE for demo purposes -->
+          <script src="{{ asset ('js/demo.js') }}"></script>
+          <!-- page script -->
+          <!-- jQuery -->
+          <script src="{{ asset ('plugins/jquery/jquery.min.js') }}"></script>
+          <!-- Bootstrap -->
+          <script src="{{ asset ('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+          <!-- jQuery UI -->
+          <script src="{{ asset ('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+          <!-- AdminLTE App -->
+          <script src="{{ asset ('dist/js/adminlte.min.js') }}"></script>
+          <!-- AdminLTE for demo purposes -->
+          <script src="../dist/js/demo.js"></script>
+          <!-- fullCalendar 2.2.5 -->
+          <script src="{{ asset ('plugins/moment/moment.min.js') }}"></script>
+          <script src="{{ asset ('plugins/fullcalendar/main.min.js') }}"></script>
+          <script src="{{ asset ('plugins/fullcalendar-daygrid/main.min.js') }}"></script>
+          <script src="{{ asset ('plugins/fullcalendar-timegrid/main.min.js') }}"></script>
+          <script src="{{ asset ('plugins/fullcalendar-interaction/main.min.js') }}"></script>
+          <script src="{{ asset ('plugins/fullcalendar-bootstrap/main.min.js') }}"></script>
+          <script>
+              $(function () {
+
+                  /* initialize the external events
+                  -----------------------------------------------------------------*/
+                  function ini_events(ele) {
+                    ele.each(function () {
+
+                        // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+                        // it doesn't need to have a start or end
+                        var eventObject = {
+                        title: $.trim($(this).text()) // use the element's text as the event title
+                        }
+
+                        // store the Event Object in the DOM element so we can get to it later
+                        $(this).data('eventObject', eventObject)
+
+                        // make the event draggable using jQuery UI
+                        $(this).draggable({
+                        zIndex        : 1070,
+                        revert        : true, // will cause the event to go back to its
+                        revertDuration: 0  //  original position after the drag
+                        })
+
+                    })
+                  }
+
+                  //ini_events($('#external-events div.external-event'))
+
+                  /* initialize the calendar
+                  -----------------------------------------------------------------*/
+                  //Date for the calendar events (dummy data)
+                // var date = new Date()
+                //var d    = date.getDate(),
+                  //   m    = date.getMonth(),
+                    // y    = date.getFullYear()
+
+                  var Calendar = FullCalendar.Calendar;
+                  var Draggable = FullCalendarInteraction.Draggable;
+
+                  var containerEl = document.getElementById('external-events');
+                  //var checkbox = document.getElementById('drop-remove');
+                  var calendarEl = document.getElementById('calendar');
+
+                  // initialize the external events
+                  // -----------------------------------------------------------------
+
+                  new Draggable(containerEl, {
+                  //itemSelector: '.external-event',
+                  eventData: function(eventEl) {
+                      console.log(eventEl);
+                      return {
+                      title: eventEl.innerText,
+                      backgroundColor: window.getComputedStyle( eventEl ,null).getPropertyValue('background-color'),
+                      borderColor: window.getComputedStyle( eventEl ,null).getPropertyValue('background-color'),
+                      textColor: window.getComputedStyle( eventEl ,null).getPropertyValue('color'),
+                      };
+                  }
+                  });
+
+                  var calendar = new Calendar(calendarEl, {
+                  plugins: [ 'bootstrap', 'interaction', 'dayGrid', 'timeGrid' ],
+                  header    : {
+                      left  : 'prev,next today',
+                      center: 'title',
+                      right : 'dayGridMonth,timeGridWeek,timeGridDay'
+                  },
+                  'themeSystem': 'bootstrap',
+                  //Random default events
+                
+                  });
+
+                  calendar.render();
+                  // $('#calendar').fullCalendar()
+                
+              })
+              function Heure() {
+                var dateGlobale = new Date();
+                var dt = document.getElementById('drop-remove');
+                var heure = dateGlobale.getHours();
+                var minute = dateGlobale.getMinutes();
+
+                if(heure<10){
+                    var h="0"+heure;
+                }else{
+                var h=heure;
+                }
+                if(minute<10){
+                    var m="0"+minute;
+                }else{
+                var m=minute;
+                }
+                dt.innerHTML=h+':'+m;
+                setTimeout("Heure()",1000);
+              }
+              Heure();
+          </script>
+      {% endblock %}
+    </body>
+</html>
